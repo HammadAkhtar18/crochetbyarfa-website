@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Shop crochetbyarfa — bouquets, hair accessories, amigurumi, home pieces and custom crochet. Starting prices in PKR." />
+  <meta name="description" content="Shop crochetbyarfa — bouquets, flowers, accessories, amigurumi, home pieces and custom crochet. Starting prices in PKR." />
   <title>Shop — crochetbyarfa</title>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -14,6 +14,7 @@
   <main id="main">
     <header class="page-hero">
       <div class="container">
+        <p class="eyebrow">Catalogue</p>
         <h1>Shop</h1>
         <p>Handmade crochet pieces with starting prices in PKR. Final price depends on size and colours — enquire on Instagram to order.</p>
       </div>
@@ -23,7 +24,8 @@
       <div class="container">
         <div class="filter-bar" role="group" aria-label="Filter by category">
           <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="filter-btn" data-filter="bouquets" aria-pressed="false">Bouquets &amp; Flowers</button>
+          <button type="button" class="filter-btn" data-filter="bouquets" aria-pressed="false">Bouquets</button>
+          <button type="button" class="filter-btn" data-filter="flowers" aria-pressed="false">Flowers</button>
           <button type="button" class="filter-btn" data-filter="accessories" aria-pressed="false">Accessories</button>
           <button type="button" class="filter-btn" data-filter="amigurumi" aria-pressed="false">Amigurumi</button>
           <button type="button" class="filter-btn" data-filter="home" aria-pressed="false">Home</button>
@@ -31,137 +33,220 @@
         </div>
 
         <div class="product-grid cols-4">
-          <article class="product-card" data-category="bouquets">
-            <div class="product-media bg-pink">
+          <article
+            class="product-card"
+            data-category="bouquets"
+            data-category-label="Bouquets"
+            data-name="Crochet rose bouquet"
+            data-price="From Rs. 2,500"
+            data-desc="A full bouquet of hand-crocheted roses that never wilt — ideal for birthdays and thank-yous."
+            data-colours="Classic red, soft pink, cream, mixed"
+            data-enquire="contact.html?product=Crochet%20rose%20bouquet"
+          >
+            <div class="product-media">
               <span class="cat-tag">Bouquets</span>
-              <img src="assets/products/rose-bouquet.svg" width="160" height="160" alt="Illustration of a crochet rose bouquet" />
+              <img src="assets/images/products/rose-bouquet.jpg" data-fallback="assets/products/rose-bouquet.svg" width="400" height="500" alt="Crochet rose bouquet" />
             </div>
             <div class="product-body">
               <h3>Crochet rose bouquet</h3>
               <p>A full bouquet of hand-crocheted roses that never wilt — ideal for birthdays and thank-yous.</p>
               <p class="product-price">From Rs. 2,500<small>Final price via DM · size &amp; colours</small></p>
               <div class="product-actions">
-                <a class="btn btn-primary btn-sm" href="contact.html?product=Crochet%20rose%20bouquet">Enquire</a>
+                <a class="btn-link" href="contact.html?product=Crochet%20rose%20bouquet">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
               </div>
             </div>
           </article>
 
-          <article class="product-card" data-category="bouquets">
-            <div class="product-media bg-yellow">
-              <span class="cat-tag">Bouquets</span>
-              <img src="assets/products/mini-floral.svg" width="160" height="160" alt="Illustration of a mini crochet floral arrangement" />
+          <article
+            class="product-card"
+            data-category="flowers"
+            data-category-label="Flowers"
+            data-name="Mini floral arrangement"
+            data-price="From Rs. 1,200"
+            data-desc="A cheerful smaller arrangement for desks, shelves, or as a sweet add-on gift."
+            data-colours="Soft pink, yellow, cream, sage"
+            data-enquire="contact.html?product=Mini%20floral%20arrangement"
+          >
+            <div class="product-media">
+              <span class="cat-tag">Flowers</span>
+              <img src="assets/images/products/mini-floral.jpg" data-fallback="assets/products/mini-floral.svg" width="400" height="500" alt="Mini floral arrangement" />
             </div>
             <div class="product-body">
               <h3>Mini floral arrangement</h3>
               <p>A cheerful smaller arrangement for desks, shelves, or as a sweet add-on gift.</p>
               <p class="product-price">From Rs. 1,200<small>Final price via DM · size &amp; colours</small></p>
               <div class="product-actions">
-                <a class="btn btn-primary btn-sm" href="contact.html?product=Mini%20floral%20arrangement">Enquire</a>
+                <a class="btn-link" href="contact.html?product=Mini%20floral%20arrangement">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
               </div>
             </div>
           </article>
 
-          <article class="product-card" data-category="accessories">
-            <div class="product-media bg-cream">
+          <article
+            class="product-card"
+            data-category="accessories"
+            data-category-label="Accessories"
+            data-name="Hair scrunchie set"
+            data-price="From Rs. 350"
+            data-desc="Soft crochet scrunchies in matching or mixed colours. Gentle on hair and lovely to gift."
+            data-colours="Soft pink, cream, sage, mixed sets"
+            data-enquire="contact.html?product=Hair%20scrunchie%20set"
+          >
+            <div class="product-media">
               <span class="cat-tag">Accessories</span>
-              <img src="assets/products/scrunchie.svg" width="160" height="160" alt="Illustration of crochet hair scrunchies" />
+              <img src="assets/images/products/scrunchie-set.jpg" data-fallback="assets/products/scrunchie.svg" width="400" height="500" alt="Hair scrunchie set" />
             </div>
             <div class="product-body">
               <h3>Hair scrunchie set</h3>
               <p>Soft crochet scrunchies in matching or mixed colours. Gentle on hair and lovely to gift.</p>
               <p class="product-price">From Rs. 350<small>Final price via DM · size &amp; colours</small></p>
               <div class="product-actions">
-                <a class="btn btn-primary btn-sm" href="contact.html?product=Hair%20scrunchie%20set">Enquire</a>
+                <a class="btn-link" href="contact.html?product=Hair%20scrunchie%20set">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
               </div>
             </div>
           </article>
 
-          <article class="product-card" data-category="accessories">
-            <div class="product-media bg-pink">
+          <article
+            class="product-card"
+            data-category="accessories"
+            data-category-label="Accessories"
+            data-name="Flower hair clips"
+            data-price="From Rs. 450"
+            data-desc="Dainty floral clips for everyday wear or special occasions. Available in soft seasonal palettes."
+            data-colours="Soft seasonal palettes"
+            data-enquire="contact.html?product=Flower%20hair%20clips"
+          >
+            <div class="product-media">
               <span class="cat-tag">Accessories</span>
-              <img src="assets/products/hair-clips.svg" width="160" height="160" alt="Illustration of crochet flower hair clips" />
+              <img src="assets/images/products/flower-clips.jpg" data-fallback="assets/products/hair-clips.svg" width="400" height="500" alt="Flower hair clips" />
             </div>
             <div class="product-body">
               <h3>Flower hair clips</h3>
               <p>Dainty floral clips for everyday wear or special occasions. Available in soft seasonal palettes.</p>
               <p class="product-price">From Rs. 450<small>Final price via DM · size &amp; colours</small></p>
               <div class="product-actions">
-                <a class="btn btn-primary btn-sm" href="contact.html?product=Flower%20hair%20clips">Enquire</a>
+                <a class="btn-link" href="contact.html?product=Flower%20hair%20clips">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
               </div>
             </div>
           </article>
 
-          <article class="product-card" data-category="amigurumi">
-            <div class="product-media bg-red">
+          <article
+            class="product-card"
+            data-category="amigurumi"
+            data-category-label="Amigurumi"
+            data-name="Amigurumi friend"
+            data-price="From Rs. 1,800"
+            data-desc="A cuddly handmade character — choose from familiar styles or ask about seasonal designs."
+            data-colours="Pastel &amp; classic yarn palettes"
+            data-enquire="contact.html?product=Amigurumi%20friend"
+          >
+            <div class="product-media">
               <span class="cat-tag">Amigurumi</span>
-              <img src="assets/products/amigurumi.svg" width="160" height="160" alt="Illustration of an amigurumi crochet friend" />
+              <img src="assets/images/products/amigurumi.jpg" data-fallback="assets/products/amigurumi.svg" width="400" height="500" alt="Amigurumi friend" />
             </div>
             <div class="product-body">
               <h3>Amigurumi friend</h3>
               <p>A cuddly handmade character — choose from familiar styles or ask about seasonal designs.</p>
               <p class="product-price">From Rs. 1,800<small>Final price via DM · size &amp; colours</small></p>
               <div class="product-actions">
-                <a class="btn btn-primary btn-sm" href="contact.html?product=Amigurumi%20friend">Enquire</a>
+                <a class="btn-link" href="contact.html?product=Amigurumi%20friend">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
               </div>
             </div>
           </article>
 
-          <article class="product-card" data-category="home">
-            <div class="product-media bg-green">
+          <article
+            class="product-card"
+            data-category="home"
+            data-category-label="Home"
+            data-name="Coaster set (4)"
+            data-price="From Rs. 900"
+            data-desc="A set of four textured coasters to brighten tea time. Mix and match colours if you like."
+            data-colours="Mix &amp; match — cream, sage, blush"
+            data-enquire="contact.html?product=Coaster%20set%20(4)"
+          >
+            <div class="product-media">
               <span class="cat-tag">Home</span>
-              <img src="assets/products/coasters.svg" width="160" height="160" alt="Illustration of a crochet coaster set" />
+              <img src="assets/images/products/coasters.jpg" data-fallback="assets/products/coasters.svg" width="400" height="500" alt="Coaster set of four" />
             </div>
             <div class="product-body">
               <h3>Coaster set (4)</h3>
               <p>A set of four textured coasters to brighten tea time. Mix and match colours if you like.</p>
               <p class="product-price">From Rs. 900<small>Final price via DM · size &amp; colours</small></p>
               <div class="product-actions">
-                <a class="btn btn-primary btn-sm" href="contact.html?product=Coaster%20set%20(4)">Enquire</a>
+                <a class="btn-link" href="contact.html?product=Coaster%20set%20(4)">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
               </div>
             </div>
           </article>
 
-          <article class="product-card" data-category="home">
-            <div class="product-media bg-yellow">
+          <article
+            class="product-card"
+            data-category="home"
+            data-category-label="Home"
+            data-name="Potholder / trivet"
+            data-price="From Rs. 750"
+            data-desc="Sturdy, colourful kitchen protection with a handmade look. A practical gift for the home."
+            data-colours="Warm neutrals &amp; accent yarns"
+            data-enquire="contact.html?product=Potholder%20%2F%20trivet"
+          >
+            <div class="product-media">
               <span class="cat-tag">Home</span>
-              <img src="assets/products/potholder.svg" width="160" height="160" alt="Illustration of a crochet potholder" />
+              <img src="assets/images/products/potholder.jpg" data-fallback="assets/products/potholder.svg" width="400" height="500" alt="Potholder / trivet" />
             </div>
             <div class="product-body">
               <h3>Potholder / trivet</h3>
               <p>Sturdy, colourful kitchen protection with a handmade look. A practical gift for the home.</p>
               <p class="product-price">From Rs. 750<small>Final price via DM · size &amp; colours</small></p>
               <div class="product-actions">
-                <a class="btn btn-primary btn-sm" href="contact.html?product=Potholder%20%2F%20trivet">Enquire</a>
+                <a class="btn-link" href="contact.html?product=Potholder%20%2F%20trivet">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
               </div>
             </div>
           </article>
 
-          <article class="product-card" data-category="custom">
-            <div class="product-media bg-pink">
+          <article
+            class="product-card"
+            data-category="custom"
+            data-category-label="Custom"
+            data-name="Custom bouquet"
+            data-price="Price on request"
+            data-desc="Tell us the colours, flower count, and occasion — we will design a bouquet just for you."
+            data-colours="Your choice — discuss via DM"
+            data-note="Fully customisable. Quote confirmed on Instagram."
+            data-enquire="custom.html?product=Custom%20bouquet"
+          >
+            <div class="product-media">
               <span class="cat-tag">Custom</span>
-              <img src="assets/products/custom-bouquet.svg" width="160" height="160" alt="Illustration representing a custom crochet bouquet" />
+              <img src="assets/images/products/custom-bouquet.jpg" data-fallback="assets/products/custom-bouquet.svg" width="400" height="500" alt="Custom crochet bouquet" />
             </div>
             <div class="product-body">
               <h3>Custom bouquet</h3>
               <p>Tell us the colours, flower count, and occasion — we will design a bouquet just for you.</p>
               <p class="product-price">Price on request<small>Quote via Instagram DM</small></p>
               <div class="product-actions">
-                <a class="btn btn-primary btn-sm" href="custom.html?product=Custom%20bouquet">Enquire</a>
+                <a class="btn-link" href="custom.html?product=Custom%20bouquet">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
               </div>
             </div>
           </article>
 
-          <article class="product-card" data-category="custom">
-            <div class="product-media bg-cream">
+          <article
+            class="product-card"
+            data-category="custom"
+            data-category-label="Custom"
+            data-name="Custom amigurumi"
+            data-price="Price on request"
+            data-desc="A character made to your brief — favourite animal, colour palette, or gift theme."
+            data-colours="Your choice — discuss via DM"
+            data-note="Fully customisable. Quote confirmed on Instagram."
+            data-enquire="custom.html?product=Custom%20amigurumi"
+          >
+            <div class="product-media">
               <span class="cat-tag">Custom</span>
-              <img src="assets/products/custom-amigurumi.svg" width="160" height="160" alt="Illustration representing a custom amigurumi design" />
+              <img src="assets/images/products/custom-amigurumi.jpg" data-fallback="assets/products/custom-amigurumi.svg" width="400" height="500" alt="Custom amigurumi design" />
             </div>
             <div class="product-body">
               <h3>Custom amigurumi</h3>
               <p>A character made to your brief — favourite animal, colour palette, or gift theme.</p>
               <p class="product-price">Price on request<small>Quote via Instagram DM</small></p>
               <div class="product-actions">
-                <a class="btn btn-primary btn-sm" href="custom.html?product=Custom%20amigurumi">Enquire</a>
+                <a class="btn-link" href="custom.html?product=Custom%20amigurumi">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
               </div>
             </div>
           </article>
@@ -178,5 +263,14 @@
   <footer id="site-footer"></footer>
   <script src="js/nav.js"></script>
   <script src="js/shop.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var filter = params.get("filter");
+      if (!filter) return;
+      var btn = document.querySelector('.filter-btn[data-filter="' + filter + '"]');
+      if (btn) btn.click();
+    })();
+  </script>
 </body>
 </html>

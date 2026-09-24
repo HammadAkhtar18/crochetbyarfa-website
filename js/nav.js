@@ -1,6 +1,7 @@
 /**
  * Injects shared header and footer into #site-header and #site-footer.
  * Sets aria-current on the active nav link based on the current page.
+ * Also wires subtle fade-up observers when present.
  */
 (function () {
   const IG = "https://www.instagram.com/crochetbyarfa/";
@@ -20,12 +21,14 @@
     return `<li><a href="${href}"${cls}${aria}>${label}</a></li>`;
   }
 
+  const igIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>`;
+
   const headerHTML = `
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="container header-inner">
       <a class="logo" href="index.html" aria-label="crochetbyarfa home">
-        <img class="logo-mark" src="assets/icons/logo.svg" width="40" height="40" alt="" />
-        <span class="logo-text">crochetbyarfa<span>Handmade with care</span></span>
+        <img class="logo-mark" src="assets/icons/logo.svg" width="32" height="32" alt="" />
+        <span class="logo-text">crochetbyarfa</span>
       </a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -38,7 +41,14 @@
           ${link("shop.html", "Shop")}
           ${link("custom.html", "Custom")}
           ${link("about.html", "About")}
-          ${link("contact.html", "Contact", true)}
+        </ul>
+        <ul class="nav-actions">
+          <li>
+            <a class="nav-ig" href="${IG}" target="_blank" rel="noopener noreferrer" aria-label="Instagram @crochetbyarfa">
+              ${igIcon}
+            </a>
+          </li>
+          ${link("contact.html", "Enquire", true)}
         </ul>
       </nav>
     </div>
@@ -50,10 +60,10 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="logo" href="index.html">
-            <img class="logo-mark" src="assets/icons/logo.svg" width="40" height="40" alt="" />
+            <img class="logo-mark" src="assets/icons/logo.svg" width="32" height="32" alt="" />
             <span class="logo-text">crochetbyarfa</span>
           </a>
-          <p>Handmade crochet, made with care. Custom orders welcome. Shipping across Pakistan.</p>
+          <p>Thoughtfully crocheted flowers, gifts and keepsakes — made one stitch at a time. Shipping across Pakistan.</p>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
@@ -61,7 +71,7 @@
             <li><a href="shop.html">Shop</a></li>
             <li><a href="custom.html">Custom orders</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Enquire</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -104,6 +114,47 @@
         toggle.setAttribute("aria-expanded", "false");
         toggle.setAttribute("aria-label", "Open menu");
       });
+    });
+  }
+
+  /* Image fallback: JPG → SVG via data-fallback or onerror class */
+  document.querySelectorAll("img[data-fallback]").forEach(function (img) {
+    function applyFallback() {
+      const fb = img.getAttribute("data-fallback");
+      if (!fb || img.dataset.fallbackApplied) return;
+      img.dataset.fallbackApplied = "1";
+      img.src = fb;
+      img.classList.add("is-fallback");
+    }
+    img.addEventListener("error", applyFallback);
+    if (img.complete && img.naturalWidth === 0) applyFallback();
+  });
+
+  /* Subtle fade-up on scroll */
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const els = document.querySelectorAll(".fade-up");
+  if (reduce) {
+    els.forEach(function (el) {
+      el.classList.add("is-visible");
+    });
+  } else if ("IntersectionObserver" in window && els.length) {
+    const io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    els.forEach(function (el) {
+      io.observe(el);
+    });
+  } else {
+    els.forEach(function (el) {
+      el.classList.add("is-visible");
     });
   }
 })();

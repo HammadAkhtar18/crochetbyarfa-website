@@ -2,7 +2,7 @@
 
 Static multi-page marketing site for the Instagram crochet brand **@crochetbyarfa**.
 
-Handmade crochet, made with care · Custom orders welcome · Shipping across Pakistan.
+Thoughtfully crocheted flowers, gifts and keepsakes — made one stitch at a time. Handmade in Pakistan · Custom orders · Shipping nationwide.
 
 ## Preview locally
 
@@ -22,12 +22,6 @@ Then open [http://127.0.0.1:5173/](http://127.0.0.1:5173/).
 npm start
 ```
 
-Or:
-
-```bash
-npx --yes serve . -p 5173
-```
-
 ### Option C — any static server
 
 Open the folder with Live Server, Caddy, nginx, etc. No build step is required.
@@ -36,23 +30,29 @@ Open the folder with Live Server, Caddy, nginx, etc. No build step is required.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home — hero, featured products, why handmade, how to order, example reviews, Instagram CTA |
-| `shop.html` | Product grid with category filters |
-| `about.html` | Brand story, shipping, custom welcome |
-| `custom.html` | Custom order process + enquiry form |
-| `contact.html` | Instagram DM + enquiry form |
+| `index.html` | Home — editorial hero, featured collection, philosophy, categories, custom teaser, how ordering works, Instagram gallery placeholders, CTA |
+| `shop.html` | Boutique catalogue with filters + product detail modal |
+| `about.html` | Brand story and values |
+| `custom.html` | Custom order process (01–04) + consultation enquiry form |
+| `contact.html` | Instagram CTA + enquiry form |
 
-Shared header and footer are injected by `js/nav.js`. Forms validate client-side, show a confirmation panel, offer **Copy enquiry**, and open the Instagram profile.
+Shared header and footer are injected by `js/nav.js`. Forms validate client-side, show a confirmation panel, offer **Copy enquiry**, and open the Instagram profile. Shop filters and a lightweight product modal live in `js/shop.js`.
+
+## Product photography
+
+Place real photos in `assets/images/products/` using the filenames listed in that folder’s README (e.g. `rose-bouquet.jpg`). Until a JPG exists, muted SVG illustrations in `assets/products/` are used as fallbacks inside photo-style frames.
+
+Instagram gallery slots use `assets/images/instagram/` — do not scrape Instagram.
 
 ## Tech
 
 - HTML + CSS + vanilla JavaScript (no framework, no build)
+- Typography: Cormorant Garamond + DM Sans (Google Fonts)
 - Mobile-first responsive layout
-- SVG illustrations as product placeholders (no scraped Instagram images)
-- Brand colours via CSS variables in `css/styles.css`
+- Brand palette via CSS variables in `css/styles.css`
 
 ## Notes
 
 - Prices shown are **starting** prices in PKR; finals depend on size and colours via DM.
 - There is no public email address on the site — enquiries go through Instagram.
-- Example reviews on the home page are clearly labelled placeholders.
+- en-GB spelling throughout.

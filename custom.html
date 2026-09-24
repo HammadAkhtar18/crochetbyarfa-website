@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Request a custom crochet order from crochetbyarfa — brief, make, ship across Pakistan." />
+  <meta name="description" content="Request a custom crochet order from crochetbyarfa — brief, consult, make and ship across Pakistan." />
   <title>Custom orders — crochetbyarfa</title>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -14,47 +14,56 @@
   <main id="main">
     <header class="page-hero">
       <div class="container">
-        <h1>Custom orders</h1>
-        <p>Have a colour palette, favourite flower, or character in mind? Custom work is welcome — we will shape it with care.</p>
+        <p class="eyebrow">Bespoke</p>
+        <h1>Made especially for you.</h1>
+        <p>
+          Have a colour palette, favourite flower, or character in mind? Share your brief —
+          we will shape a handmade piece that feels personal, then confirm details on Instagram.
+        </p>
       </div>
     </header>
 
-    <section class="section section-alt" aria-labelledby="process-heading">
+    <section class="section" aria-labelledby="process-heading">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header fade-up">
           <span class="eyebrow">The process</span>
-          <h2 id="process-heading">Brief → make → ship</h2>
-          <p>A simple path from your idea to a handmade piece at your door.</p>
+          <h2 id="process-heading">From idea to doorstep</h2>
+          <p>A calm path from your brief to a finished piece.</p>
         </div>
-        <div class="steps">
+        <div class="steps steps-4 fade-up">
           <article class="step">
-            <span class="step-num" aria-hidden="true">1</span>
-            <h3>Brief</h3>
-            <p>Tell us what you would like: product type, colours, size, occasion, and your city for shipping. Use the form below or message Instagram directly.</p>
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3>Share your idea</h3>
+            <p>Tell us the product type, colours, size, occasion and your city for shipping.</p>
           </article>
           <article class="step">
-            <span class="step-num" aria-hidden="true">2</span>
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3>Consult &amp; quote</h3>
+            <p>We reply on Instagram with timing, yarn options and a clear price before anything begins.</p>
+          </article>
+          <article class="step">
+            <span class="step-num" aria-hidden="true">03</span>
             <h3>Make</h3>
-            <p>Once details and price are agreed, your piece is crocheted by hand. Timing depends on complexity — we will be clear upfront.</p>
+            <p>Your piece is crocheted by hand. Timing depends on complexity — we will be clear upfront.</p>
           </article>
           <article class="step">
-            <span class="step-num" aria-hidden="true">3</span>
+            <span class="step-num" aria-hidden="true">04</span>
             <h3>Ship</h3>
-            <p>Your finished order is packed carefully and shipped across Pakistan. Tracking and timing are confirmed in your DM conversation.</p>
+            <p>Packed carefully and shipped across Pakistan. Tracking and timing confirmed in your DM.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="form-heading">
+    <section class="section section-alt" aria-labelledby="form-heading">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">Enquire</span>
+        <div class="section-header center fade-up">
+          <span class="eyebrow">Consultation</span>
           <h2 id="form-heading">Draft your custom request</h2>
           <p>We will help you write a clear message, then open Instagram so you can paste it to @crochetbyarfa.</p>
         </div>
 
-        <div class="form-panel">
+        <div class="form-panel fade-up">
           <form data-enquiry novalidate>
             <div class="form-fields">
               <div class="form-group">
@@ -78,7 +87,8 @@
                 <label for="c-category">Category <span class="hint">(optional)</span></label>
                 <select id="c-category" name="category">
                   <option value="">—</option>
-                  <option>Bouquets &amp; Flowers</option>
+                  <option>Bouquets</option>
+                  <option>Flowers</option>
                   <option>Accessories</option>
                   <option>Amigurumi</option>
                   <option>Home</option>
@@ -91,7 +101,7 @@
                 <span class="error" role="alert">Please fill in this field.</span>
               </div>
               <div class="form-group">
-                <label for="c-size">Size or details</label>
+                <label for="c-size">Size or details <span class="hint">(optional)</span></label>
                 <input type="text" id="c-size" name="size" placeholder="e.g. small bouquet, ~20 cm tall" />
               </div>
               <div class="form-group">
@@ -104,7 +114,6 @@
                 <textarea id="c-message" name="message" required placeholder="Occasion, deadline, inspiration, or anything else we should know…"></textarea>
                 <span class="error" role="alert">Please fill in this field.</span>
               </div>
-              <!-- WhatsApp intentionally unused / hidden until a number is available -->
               <input type="hidden" name="whatsapp" value="" />
               <button type="submit" class="btn btn-primary btn-block">Prepare Instagram enquiry</button>
             </div>
