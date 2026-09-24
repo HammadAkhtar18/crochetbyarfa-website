@@ -40,7 +40,7 @@ Shared header and footer are injected by `js/nav.js`. Forms validate client-side
 
 ## Product photography
 
-Place real photos in `assets/images/products/` using the filenames listed in that folder’s README (e.g. `rose-bouquet.jpg`). Until a JPG exists, muted SVG illustrations in `assets/products/` are used as fallbacks inside photo-style frames.
+Place real photos in `assets/images/products/` using the filenames listed in that folder’s README (e.g. `rose-bouquet.jpg`). Pages load SVG placeholders first and auto-prefer a JPG when you drop it via `data-photo`.
 
 Instagram gallery slots use `assets/images/instagram/` — do not scrape Instagram.
 

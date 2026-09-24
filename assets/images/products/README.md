@@ -1,6 +1,6 @@
 # Product photography
 
-Drop real product photos here. Filenames should match the product slugs used in the HTML.
+Drop real product photos here. Filenames should match the product slugs used in the HTML `data-photo` attributes.
 
 Expected files (JPG recommended, 4:5 portrait crop preferred):
 
@@ -15,6 +15,6 @@ Expected files (JPG recommended, 4:5 portrait crop preferred):
 | `potholder.jpg` | Potholder / trivet |
 | `custom-bouquet.jpg` | Custom bouquet |
 | `custom-amigurumi.jpg` | Custom amigurumi |
-| `hero-feature.jpg` | Home hero editorial image |
+| `hero-feature.jpg` | Home / about hero editorial image |
 
-Until a JPG is present, the site falls back to the muted SVG illustrations in `assets/products/`.
+Drop a JPG with the documented filename; the page will auto-prefer it via `data-photo`. Until then, SVG illustrations in `assets/products/` (and `assets/icons/hero-scene.svg` for the hero) show as intentional placeholders.

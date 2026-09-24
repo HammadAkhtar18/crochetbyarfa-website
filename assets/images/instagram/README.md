@@ -12,4 +12,5 @@ Suggested filenames:
 - `ig-06.jpg`
 
 Do not scrape Instagram. Add only photos you own or have permission to use.
-Until files are present, elegant empty frames are shown.
+
+Drop a JPG with the documented filename; the page will auto-prefer it via `data-photo`. Until files are present, SVG marks sit in warm gradient frames.

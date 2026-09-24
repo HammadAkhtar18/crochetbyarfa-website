@@ -104,20 +104,22 @@
     enquireEl.href = enquire;
     enquireEl.textContent = enquire.indexOf("custom.html") !== -1 ? "Request custom" : "Enquire";
 
-    mediaImg.classList.remove("is-fallback");
     mediaImg.alt = alt;
-    mediaImg.onerror = function () {
-      if (fallback) {
-        mediaImg.onerror = null;
-        mediaImg.src = fallback;
-        mediaImg.classList.add("is-fallback");
-      }
-    };
-    if (img && img.classList.contains("is-fallback") && fallback) {
-      mediaImg.src = fallback;
+    mediaImg.onerror = null;
+    /* Current card img src is already SVG (is-fallback) or a loaded photo */
+    mediaImg.src = src;
+    if (img && img.classList.contains("is-fallback")) {
       mediaImg.classList.add("is-fallback");
     } else {
-      mediaImg.src = src;
+      mediaImg.classList.remove("is-fallback");
+      mediaImg.onerror = function () {
+        const fb = fallback || (img && img.getAttribute("src"));
+        if (fb) {
+          mediaImg.onerror = null;
+          mediaImg.src = fb;
+          mediaImg.classList.add("is-fallback");
+        }
+      };
     }
 
     lastFocus = document.activeElement;

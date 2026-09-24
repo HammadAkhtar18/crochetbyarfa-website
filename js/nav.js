@@ -117,7 +117,21 @@
     });
   }
 
-  /* Image fallback: JPG → SVG via data-fallback or onerror class */
+  /* Prefer real photos via data-photo; SVG is the initial src. Keep data-fallback support. */
+  document.querySelectorAll("img[data-photo]").forEach(function (img) {
+    const photo = img.getAttribute("data-photo");
+    if (!photo) return;
+    const probe = new Image();
+    probe.onload = function () {
+      img.src = photo;
+      img.classList.remove("is-fallback");
+    };
+    probe.onerror = function () {
+      /* keep SVG src + is-fallback */
+    };
+    probe.src = photo;
+  });
+
   document.querySelectorAll("img[data-fallback]").forEach(function (img) {
     function applyFallback() {
       const fb = img.getAttribute("data-fallback");

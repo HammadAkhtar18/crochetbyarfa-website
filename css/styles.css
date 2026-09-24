@@ -564,14 +564,15 @@ h2 em,
 
 .hero-art img.is-fallback,
 .hero-art .fallback-mark {
-  width: 42%;
-  max-width: 160px;
+  width: 48%;
+  max-width: 180px;
   height: auto;
   margin: auto;
-  opacity: 0.35;
+  opacity: 0.52;
   object-fit: contain;
   position: absolute;
   inset: 0;
+  filter: none;
 }
 
 .hero-art .media-frame {
@@ -676,7 +677,7 @@ h2 em,
   place-items: center;
   position: relative;
   overflow: hidden;
-  background: #f0ebe4;
+  background: linear-gradient(160deg, #f5efe8 0%, #efe4dc 45%, var(--accent-soft) 100%);
 }
 
 .product-media img {
@@ -691,12 +692,12 @@ h2 em,
 }
 
 .product-media img.is-fallback {
-  width: 38%;
-  max-width: 120px;
+  width: 48%;
+  max-width: 160px;
   height: auto;
   object-fit: contain;
-  opacity: 0.28;
-  filter: grayscale(0.2);
+  opacity: 0.52;
+  filter: none;
 }
 
 .product-media .cat-tag {
@@ -995,8 +996,10 @@ h2 em,
 
 .teaser-visual img.is-fallback,
 .teaser-visual .fallback-mark {
-  width: 36%;
-  opacity: 0.3;
+  width: 48%;
+  max-width: 160px;
+  opacity: 0.52;
+  filter: none;
 }
 
 .teaser-copy h2 {
@@ -1033,7 +1036,7 @@ h2 em,
 .ig-slot {
   aspect-ratio: 1;
   border-radius: var(--radius-sm);
-  background: #f0ebe4;
+  background: linear-gradient(160deg, #f5efe8 0%, #efe4dc 45%, var(--accent-soft) 100%);
   border: 1px solid var(--border);
   display: grid;
   place-items: center;
@@ -1261,13 +1264,15 @@ h2 em,
 }
 
 .split-art img.is-fallback {
-  width: 40%;
+  width: 48%;
+  max-width: 180px;
   height: auto;
-  opacity: 0.3;
+  opacity: 0.52;
   object-fit: contain;
   position: absolute;
   inset: 0;
   margin: auto;
+  filter: none;
 }
 
 /* —— Forms —— */
@@ -1516,7 +1521,7 @@ h2 em,
 
 .product-modal-media {
   aspect-ratio: 4 / 5;
-  background: #f0ebe4;
+  background: linear-gradient(160deg, #f5efe8 0%, #efe4dc 45%, var(--accent-soft) 100%);
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -1537,10 +1542,12 @@ h2 em,
 }
 
 .product-modal-media img.is-fallback {
-  width: 40%;
+  width: 48%;
+  max-width: 180px;
   height: auto;
-  opacity: 0.3;
+  opacity: 0.52;
   object-fit: contain;
+  filter: none;
 }
 
 .product-modal-body {
@@ -1783,14 +1790,15 @@ main {
 }
 
 .ig-slot img.is-fallback {
-  width: 32%;
+  width: 46%;
   height: auto;
-  max-width: 72px;
-  opacity: 0.22;
+  max-width: 96px;
+  opacity: 0.5;
   object-fit: contain;
   position: absolute;
   inset: 0;
   margin: auto;
+  filter: none;
 }
 
 .ig-slot:has(img.is-fallback) span {
