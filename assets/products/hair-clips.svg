@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-hidden="true">
+  <g transform="translate(70,100)">
+    <rect x="-4" y="-35" width="8" height="70" rx="4" fill="#c9b8a8" transform="rotate(-20)"/>
+    <g transform="translate(0,-8)">
+      <circle cx="0" cy="-12" r="9" fill="#f4a5b8"/>
+      <circle cx="10" cy="-2" r="9" fill="#e87a94"/>
+      <circle cx="6" cy="10" r="9" fill="#f4a5b8"/>
+      <circle cx="-6" cy="10" r="9" fill="#d96b8a"/>
+      <circle cx="-10" cy="-2" r="9" fill="#e87a94"/>
+      <circle cx="0" cy="0" r="7" fill="#f5d76e"/>
+    </g>
+  </g>
+  <g transform="translate(130,100)">
+    <rect x="-4" y="-35" width="8" height="70" rx="4" fill="#c9b8a8" transform="rotate(15)"/>
+    <g transform="translate(0,-5)">
+      <circle cx="0" cy="-11" r="8" fill="#8fbc8f"/>
+      <circle cx="9" cy="-1" r="8" fill="#5a8f5a"/>
+      <circle cx="5" cy="10" r="8" fill="#8fbc8f"/>
+      <circle cx="-5" cy="10" r="8" fill="#6aa06a"/>
+      <circle cx="-9" cy="-1" r="8" fill="#5a8f5a"/>
+      <circle cx="0" cy="0" r="6" fill="#fbf3d0"/>
+    </g>
+  </g>
+</svg>

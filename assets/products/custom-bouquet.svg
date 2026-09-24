@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-hidden="true">
+  <g transform="translate(100,100)">
+    <path d="M-40 30 Q0 55 40 30 L30 70 Q0 85 -30 70 Z" fill="#f4a5b8"/>
+    <path d="M-28 35 Q0 50 28 35" fill="none" stroke="#e87a94" stroke-width="3"/>
+    <circle cx="-22" cy="-10" r="18" fill="#c94a5a"/>
+    <circle cx="0" cy="-28" r="20" fill="#e87a94"/>
+    <circle cx="24" cy="-8" r="17" fill="#f4a5b8"/>
+    <circle cx="-5" cy="5" r="14" fill="#d96b8a"/>
+    <circle cx="12" cy="8" r="12" fill="#8fbc8f"/>
+    <text x="0" y="-55" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#c94a5a">✦</text>
+  </g>
+</svg>

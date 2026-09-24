@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Request a custom crochet order from crochetbyarfa — brief, make, ship across Pakistan." />
+  <title>Custom orders — crochetbyarfa</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="container">
+        <h1>Custom orders</h1>
+        <p>Have a colour palette, favourite flower, or character in mind? Custom work is welcome — we will shape it with care.</p>
+      </div>
+    </header>
+
+    <section class="section section-alt" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">The process</span>
+          <h2 id="process-heading">Brief → make → ship</h2>
+          <p>A simple path from your idea to a handmade piece at your door.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Brief</h3>
+            <p>Tell us what you would like: product type, colours, size, occasion, and your city for shipping. Use the form below or message Instagram directly.</p>
+          </article>
+          <article class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Make</h3>
+            <p>Once details and price are agreed, your piece is crocheted by hand. Timing depends on complexity — we will be clear upfront.</p>
+          </article>
+          <article class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Ship</h3>
+            <p>Your finished order is packed carefully and shipped across Pakistan. Tracking and timing are confirmed in your DM conversation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Enquire</span>
+          <h2 id="form-heading">Draft your custom request</h2>
+          <p>We will help you write a clear message, then open Instagram so you can paste it to @crochetbyarfa.</p>
+        </div>
+
+        <div class="form-panel">
+          <form data-enquiry novalidate>
+            <div class="form-fields">
+              <div class="form-group">
+                <label for="c-name">Your name</label>
+                <input type="text" id="c-name" name="name" required autocomplete="name" />
+                <span class="error" role="alert">Please fill in this field.</span>
+              </div>
+              <div class="form-group">
+                <label for="c-product">What would you like?</label>
+                <select id="c-product" name="product" required>
+                  <option value="">Please select…</option>
+                  <option>Custom bouquet</option>
+                  <option>Custom amigurumi</option>
+                  <option>Custom accessories</option>
+                  <option>Custom home piece</option>
+                  <option>Something else</option>
+                </select>
+                <span class="error" role="alert">Please fill in this field.</span>
+              </div>
+              <div class="form-group">
+                <label for="c-category">Category <span class="hint">(optional)</span></label>
+                <select id="c-category" name="category">
+                  <option value="">—</option>
+                  <option>Bouquets &amp; Flowers</option>
+                  <option>Accessories</option>
+                  <option>Amigurumi</option>
+                  <option>Home</option>
+                  <option>Custom</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="c-colours">Preferred colours</label>
+                <input type="text" id="c-colours" name="colours" required placeholder="e.g. soft pink, cream, sage green" />
+                <span class="error" role="alert">Please fill in this field.</span>
+              </div>
+              <div class="form-group">
+                <label for="c-size">Size or details</label>
+                <input type="text" id="c-size" name="size" placeholder="e.g. small bouquet, ~20 cm tall" />
+              </div>
+              <div class="form-group">
+                <label for="c-city">City for shipping</label>
+                <input type="text" id="c-city" name="city" required autocomplete="address-level2" placeholder="e.g. Lahore" />
+                <span class="error" role="alert">Please fill in this field.</span>
+              </div>
+              <div class="form-group">
+                <label for="c-message">Your message</label>
+                <textarea id="c-message" name="message" required placeholder="Occasion, deadline, inspiration, or anything else we should know…"></textarea>
+                <span class="error" role="alert">Please fill in this field.</span>
+              </div>
+              <!-- WhatsApp intentionally unused / hidden until a number is available -->
+              <input type="hidden" name="whatsapp" value="" />
+              <button type="submit" class="btn btn-primary btn-block">Prepare Instagram enquiry</button>
+            </div>
+          </form>
+
+          <div class="form-success" hidden>
+            <h3>Your enquiry is ready</h3>
+            <p>
+              Instagram should open in a new tab. Copy the message below, then paste it into a DM to
+              <strong>@crochetbyarfa</strong>.
+            </p>
+            <div class="copy-box" aria-live="polite"></div>
+            <div class="cta-actions" style="flex-direction:column;align-items:stretch">
+              <button type="button" class="btn btn-primary" data-copy>Copy enquiry</button>
+              <button type="button" class="btn btn-secondary" data-ig>Message @crochetbyarfa on Instagram</button>
+              <button type="button" class="btn btn-ghost" data-again>Write another enquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/nav.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
