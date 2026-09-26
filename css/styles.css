@@ -752,7 +752,7 @@ h2 em,
   color: var(--ink);
 }
 
-.product-body > p:not(.product-price) {
+.product-body > p:not(.product-price):not(.product-meta-line) {
   font-size: 0.875rem;
   color: var(--text-body);
   flex: 1;
@@ -1835,6 +1835,450 @@ main {
 }
 
 
+/* —— Occasion cards (editorial, not pills) —— */
+.section-tight {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.occasion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 700px) {
+  .occasion-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .occasion-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.occasion-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.occasion-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--accent-soft);
+  color: var(--ink);
+}
+
+.occasion-media {
+  aspect-ratio: 3 / 4;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(165deg, #f3eee7 0%, #ebe3db 50%, #e6d4d8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.occasion-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.occasion-media img.is-fallback {
+  width: 38%;
+  max-width: 88px;
+  height: auto;
+  opacity: 0.32;
+  object-fit: contain;
+  filter: saturate(0.7);
+}
+
+.occasion-body {
+  padding: 0.95rem 0.9rem 1.1rem;
+  text-align: left;
+}
+
+.occasion-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.occasion-body p {
+  font-size: 0.72rem;
+  color: var(--text-meta);
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+/* —— Product status + meta —— */
+.status-tag {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(51, 37, 40, 0.78);
+  color: var(--surface);
+  padding: 0.28rem 0.55rem;
+  border-radius: 4px;
+  z-index: 1;
+  backdrop-filter: blur(6px);
+  max-width: 46%;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.product-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-meta);
+  margin: 0 0 0.15rem;
+}
+
+.product-meta-line span + span::before {
+  content: "·";
+  margin-right: 0.75rem;
+  opacity: 0.5;
+}
+
+/* —— Story split —— */
+.story-split {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .story-split {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 4rem;
+  }
+}
+
+.story-frame {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(165deg, #f1ebe4 0%, #e8dfd8 55%, #e4d0d5 100%);
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.story-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-frame img.is-fallback {
+  width: 36%;
+  max-width: 140px;
+  height: auto;
+  opacity: 0.28;
+  object-fit: contain;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  filter: saturate(0.55) contrast(0.92);
+}
+
+.story-copy h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+
+.story-copy p {
+  color: var(--text-body);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  max-width: 40ch;
+}
+
+.story-copy .btn-link {
+  margin-top: 0.75rem;
+}
+
+/* —— Choose list (custom teaser) —— */
+.choose-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.choose-list li {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+}
+
+/* —— Trust band —— */
+.trust-band {
+  display: grid;
+  gap: 2rem;
+  align-items: end;
+  max-width: 48rem;
+  margin-inline: auto;
+  text-align: left;
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 800px) {
+  .trust-band {
+    grid-template-columns: 1.4fr auto;
+    gap: 3rem;
+  }
+}
+
+.trust-copy h2 {
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  margin-bottom: 0.85rem;
+}
+
+.trust-copy p {
+  color: var(--text-body);
+  line-height: 1.7;
+  max-width: 42ch;
+}
+
+.trust-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+@media (min-width: 800px) {
+  .trust-actions {
+    min-width: 220px;
+  }
+}
+
+.owner-note {
+  font-size: 0.8rem;
+  color: var(--text-meta);
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* —— Custom page info —— */
+.custom-info-grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 860px) {
+  .custom-info-grid {
+    grid-template-columns: 1.2fr 0.9fr;
+    gap: 3.5rem;
+  }
+}
+
+.share-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.share-list li {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.55;
+  padding-left: 1.15rem;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.85rem;
+}
+
+.share-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+}
+
+.share-list strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.guidance-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+}
+
+.guidance-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.guidance-card p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 0.85rem;
+}
+
+.guidance-soft {
+  font-size: 0.85rem !important;
+  color: var(--text-meta) !important;
+  border-top: 1px solid var(--border);
+  padding-top: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.guidance-card .btn {
+  margin-top: 0.5rem;
+}
+
+/* —— Contact order flow —— */
+.flow-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 0 auto;
+  max-width: 52rem;
+  padding: 0;
+}
+
+@media (min-width: 700px) {
+  .flow-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .flow-steps {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.flow-steps li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 0.85rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.flow-num {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--accent);
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.flow-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.flow-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--text-body);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.flow-list li + li {
+  margin-top: 0.35rem;
+}
+
+.shop-order-note {
+  margin-top: 2.5rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  max-width: 44rem;
+}
+
+.shop-order-note-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.pakistan-note {
+  margin-top: 2.5rem;
+  max-width: 40rem;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.pakistan-note h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.65rem;
+}
+
+.pakistan-note p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 0.65rem;
+}
+
+.contact-hero-cta {
+  padding-top: 0.5rem;
+}
+
+
+
 /* —— Mobile polish (390 / 430) —— */
 @media (max-width: 480px) {
   .hero {
@@ -1903,6 +2347,33 @@ main {
 
   .cta-band {
     padding: 2.5rem 1.35rem;
+  }
+
+  .occasion-grid {
+    gap: 0.75rem;
+  }
+
+  .occasion-body {
+    padding: 0.8rem 0.75rem 0.95rem;
+  }
+
+  .status-tag {
+    top: 0.65rem;
+    right: 0.65rem;
+    font-size: 0.58rem;
+  }
+
+  .choose-list li {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .trust-actions .btn {
+    min-height: 44px;
+  }
+
+  .flow-steps {
+    gap: 0.5rem;
   }
 }
 

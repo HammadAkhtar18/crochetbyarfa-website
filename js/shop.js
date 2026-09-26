@@ -50,7 +50,7 @@
       '    <p class="product-modal-desc"></p>' +
       '    <div class="product-modal-meta"></div>' +
       '    <div class="product-modal-actions">' +
-      '      <a class="btn btn-primary" data-enquire href="#">Enquire on Instagram</a>' +
+      '      <a class="btn btn-primary" data-enquire href="#">Ask about this piece</a>' +
       '      <a class="btn btn-secondary" data-ig href="' +
       IG +
       '" target="_blank" rel="noopener noreferrer">Open Instagram</a>' +
@@ -85,24 +85,50 @@
     const desc = card.getAttribute("data-desc") || (card.querySelector(".product-body > p:not(.product-price)") && card.querySelector(".product-body > p:not(.product-price)").textContent) || "";
     const colours = card.getAttribute("data-colours") || "Soft seasonal palettes — confirm via DM";
     const note = card.getAttribute("data-note") || "Customisation welcome. Final price depends on size and colours.";
+    const status = card.getAttribute("data-status") || "Made to order";
+    const materials = (card.getAttribute("data-materials") || "").trim();
+    const dimensions = (card.getAttribute("data-dimensions") || "").trim();
+    const care = (card.getAttribute("data-care") || "").trim();
+    const prep = (card.getAttribute("data-prep") || "").trim();
     const enquire = card.getAttribute("data-enquire") || "contact.html?product=" + encodeURIComponent(name);
     const img = card.querySelector(".product-media img");
     const src = img ? img.currentSrc || img.src : "";
     const fallback = img ? img.getAttribute("data-fallback") : "";
     const alt = img ? img.getAttribute("alt") || name : name;
 
-    catEl.textContent = category;
+    catEl.textContent = category ? category + " · " + status : status;
     titleEl.textContent = name;
     priceEl.textContent = price;
     descEl.textContent = desc;
-    metaEl.innerHTML =
-      "<p><strong>Available colours</strong>" +
-      colours +
-      "</p><p style=\"margin-top:0.75rem\"><strong>Customisation</strong>" +
-      note +
-      "</p>";
+
+    var metaParts = [];
+    metaParts.push("<p><strong>Availability</strong>" + status + "</p>");
+    metaParts.push("<p style=\"margin-top:0.75rem\"><strong>Available colours</strong>" + colours + "</p>");
+    if (materials) {
+      metaParts.push("<p style=\"margin-top:0.75rem\"><strong>Materials</strong>" + materials + "</p>");
+    } else {
+      metaParts.push("<p style=\"margin-top:0.75rem\" data-owner-fill=\"materials\"><strong>Materials</strong>Yarn details confirmed on enquiry</p>");
+    }
+    if (dimensions) {
+      metaParts.push("<p style=\"margin-top:0.75rem\"><strong>Dimensions</strong>" + dimensions + "</p>");
+    } else {
+      metaParts.push("<p style=\"margin-top:0.75rem\" data-owner-fill=\"dimensions\"><strong>Dimensions</strong>Size options discussed via DM</p>");
+    }
+    if (care) {
+      metaParts.push("<p style=\"margin-top:0.75rem\"><strong>Care</strong>" + care + "</p>");
+    } else {
+      metaParts.push("<p style=\"margin-top:0.75rem\" data-owner-fill=\"care\"><strong>Care</strong>Gentle care notes shared with your order</p>");
+    }
+    if (prep) {
+      metaParts.push("<p style=\"margin-top:0.75rem\"><strong>Prep time</strong>" + prep + "</p>");
+    } else {
+      metaParts.push("<p style=\"margin-top:0.75rem\" data-owner-fill=\"prep\"><strong>Prep time</strong>Timing confirmed on Instagram</p>");
+    }
+    metaParts.push("<p style=\"margin-top:0.75rem\"><strong>Customisation</strong>" + note + "</p>");
+    metaEl.innerHTML = metaParts.join("");
+
     enquireEl.href = enquire;
-    enquireEl.textContent = enquire.indexOf("custom.html") !== -1 ? "Request custom" : "Enquire";
+    enquireEl.textContent = enquire.indexOf("custom.html") !== -1 ? "Request custom" : "Ask about this piece";
 
     mediaImg.alt = alt;
     mediaImg.onerror = null;

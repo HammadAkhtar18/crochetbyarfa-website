@@ -63,7 +63,7 @@
             <img class="logo-mark" src="assets/icons/logo.svg" width="32" height="32" alt="" />
             <span class="logo-text">crochetbyarfa</span>
           </a>
-          <p>Thoughtfully crocheted flowers, gifts and keepsakes — made one stitch at a time. Shipping across Pakistan.</p>
+          <p>Thoughtfully crocheted flowers, gifts and keepsakes — made one stitch at a time in Pakistan. Orders via Instagram DM.</p>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
@@ -161,10 +161,16 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -20px 0px" }
     );
     els.forEach(function (el) {
       io.observe(el);
+      /* Reveal anything already in (or near) the viewport on load */
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92 && r.bottom > 0) {
+        el.classList.add("is-visible");
+        io.unobserve(el);
+      }
     });
   } else {
     els.forEach(function (el) {

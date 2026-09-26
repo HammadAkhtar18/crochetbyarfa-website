@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="crochetbyarfa — handmade crochet flowers, gifts and keepsakes made in Pakistan. Custom orders welcome. Shipping nationwide." />
+  <meta name="description" content="crochetbyarfa — handmade crochet flowers, gifts and keepsakes made in Pakistan. Custom orders via Instagram. Shipping nationwide." />
+  <meta name="theme-color" content="#F8F5F0" />
+  <meta property="og:title" content="crochetbyarfa — Handmade pieces, made to be remembered" />
+  <meta property="og:description" content="Thoughtfully crocheted flowers, gifts and keepsakes — made one stitch at a time in Pakistan. Enquire on Instagram." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>crochetbyarfa — Handmade pieces, made to be remembered</title>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -19,6 +24,7 @@
           <h1>Handmade pieces, <em>made to be remembered.</em></h1>
           <p class="hero-lead">
             Thoughtfully crocheted flowers, gifts and keepsakes — made one stitch at a time.
+            Browse the collection or share a custom idea on Instagram.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="shop.html">Shop the collection</a>
@@ -26,7 +32,8 @@
           </div>
           <div class="hero-meta">
             <span>Handmade in Pakistan</span>
-            <span>Custom orders</span>
+            <span>Made to order</span>
+            <span>Orders via Instagram</span>
             <span>Shipping nationwide</span>
           </div>
         </div>
@@ -44,13 +51,80 @@
       </div>
     </section>
 
+    <!-- Shop by occasion — elegant cards, not pills -->
+    <section class="section section-tight" aria-labelledby="occasion-heading">
+      <div class="container">
+        <div class="section-header center fade-up">
+          <span class="eyebrow">Shop by occasion</span>
+          <h2 id="occasion-heading">Gifts for every moment</h2>
+          <p>From birthdays to everyday treats — find a piece that feels right, or ask for something made for you.</p>
+        </div>
+        <div class="occasion-grid fade-up">
+          <a class="occasion-card" href="shop.html?filter=bouquets">
+            <div class="occasion-media" aria-hidden="true">
+              <img class="is-fallback" src="assets/products/rose-bouquet.svg" data-photo="assets/images/products/rose-bouquet.jpg" width="320" height="400" alt="" loading="lazy" />
+            </div>
+            <div class="occasion-body">
+              <h3>Birthday</h3>
+              <p>Lasting florals and soft keepsakes</p>
+            </div>
+          </a>
+          <a class="occasion-card" href="shop.html">
+            <div class="occasion-media" aria-hidden="true">
+              <img class="is-fallback" src="assets/products/mini-floral.svg" data-photo="assets/images/products/mini-floral.jpg" width="320" height="400" alt="" loading="lazy" />
+            </div>
+            <div class="occasion-body">
+              <h3>Gifting</h3>
+              <p>Thoughtful pieces ready to wrap</p>
+            </div>
+          </a>
+          <a class="occasion-card" href="shop.html?filter=flowers">
+            <div class="occasion-media" aria-hidden="true">
+              <img class="is-fallback" src="assets/products/mini-floral.svg" data-photo="assets/images/products/mini-floral.jpg" width="320" height="400" alt="" loading="lazy" />
+            </div>
+            <div class="occasion-body">
+              <h3>Flowers</h3>
+              <p>Bouquets and mini arrangements</p>
+            </div>
+          </a>
+          <a class="occasion-card" href="shop.html?filter=amigurumi">
+            <div class="occasion-media" aria-hidden="true">
+              <img class="is-fallback" src="assets/products/amigurumi.svg" data-photo="assets/images/products/amigurumi.jpg" width="320" height="400" alt="" loading="lazy" />
+            </div>
+            <div class="occasion-body">
+              <h3>Keepsakes</h3>
+              <p>Characters and pieces to hold on to</p>
+            </div>
+          </a>
+          <a class="occasion-card" href="custom.html">
+            <div class="occasion-media" aria-hidden="true">
+              <img class="is-fallback" src="assets/products/custom-bouquet.svg" data-photo="assets/images/products/custom-bouquet.jpg" width="320" height="400" alt="" loading="lazy" />
+            </div>
+            <div class="occasion-body">
+              <h3>Custom</h3>
+              <p>Made to your colours and brief</p>
+            </div>
+          </a>
+          <a class="occasion-card" href="shop.html?filter=accessories">
+            <div class="occasion-media" aria-hidden="true">
+              <img class="is-fallback" src="assets/products/scrunchie.svg" data-photo="assets/images/products/scrunchie-set.jpg" width="320" height="400" alt="" loading="lazy" />
+            </div>
+            <div class="occasion-body">
+              <h3>Everyday</h3>
+              <p>Accessories and home crochet</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="featured-heading">
       <div class="container">
         <div class="section-header-row fade-up">
           <div class="section-header">
             <span class="eyebrow">Collection</span>
             <h2 id="featured-heading">Featured pieces</h2>
-            <p>A selection of favourites — final prices depend on size and colours. Enquire on Instagram to order.</p>
+            <p>Favourites from the catalogue — starting prices in PKR. Final details confirmed when you enquire on Instagram.</p>
           </div>
           <a class="btn-link" href="shop.html">View all <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
         </div>
@@ -61,15 +135,21 @@
             data-category-label="Bouquets"
             data-name="Crochet rose bouquet"
             data-price="From Rs. 2,500"
+            data-status="Made to order"
             data-desc="A lasting bouquet of hand-crocheted roses — perfect for celebrations that deserve something special."
             data-colours="Classic red, soft pink, cream, mixed"
+            data-materials=""
+            data-dimensions=""
+            data-care=""
+            data-prep=""
             data-enquire="contact.html?product=Crochet%20rose%20bouquet"
           >
             <div class="product-media">
               <span class="cat-tag">Bouquets</span>
+              <span class="status-tag">Made to order</span>
               <img class="is-fallback"
                 src="assets/products/rose-bouquet.svg"
-              data-photo="assets/images/products/rose-bouquet.jpg"
+                data-photo="assets/images/products/rose-bouquet.jpg"
                 width="400"
                 height="500"
                 alt="Crochet rose bouquet"
@@ -90,18 +170,25 @@
             data-category-label="Accessories"
             data-name="Hair scrunchie set"
             data-price="From Rs. 350"
+            data-status="Made to order"
             data-desc="Soft, stretchy scrunchies in cheerful colourways — a lovely everyday treat or gift add-on."
             data-colours="Soft pink, cream, sage, mixed sets"
+            data-materials=""
+            data-dimensions=""
+            data-care=""
+            data-prep=""
             data-enquire="contact.html?product=Hair%20scrunchie%20set"
           >
             <div class="product-media">
               <span class="cat-tag">Accessories</span>
+              <span class="status-tag">Made to order</span>
               <img class="is-fallback"
                 src="assets/products/scrunchie.svg"
-              data-photo="assets/images/products/scrunchie-set.jpg"
+                data-photo="assets/images/products/scrunchie-set.jpg"
                 width="400"
                 height="500"
                 alt="Hair scrunchie set"
+                loading="lazy"
               />
             </div>
             <div class="product-body">
@@ -119,18 +206,25 @@
             data-category-label="Amigurumi"
             data-name="Amigurumi friend"
             data-price="From Rs. 1,800"
+            data-status="Made to order"
             data-desc="Huggable handmade characters with personality — choose a classic design or dream up your own."
             data-colours="Pastel &amp; classic yarn palettes"
+            data-materials=""
+            data-dimensions=""
+            data-care=""
+            data-prep=""
             data-enquire="contact.html?product=Amigurumi%20friend"
           >
             <div class="product-media">
               <span class="cat-tag">Amigurumi</span>
+              <span class="status-tag">Made to order</span>
               <img class="is-fallback"
                 src="assets/products/amigurumi.svg"
-              data-photo="assets/images/products/amigurumi.jpg"
+                data-photo="assets/images/products/amigurumi.jpg"
                 width="400"
                 height="500"
                 alt="Amigurumi friend"
+                loading="lazy"
               />
             </div>
             <div class="product-body">
@@ -146,39 +240,42 @@
       </div>
     </section>
 
-    <section class="section section-alt" aria-labelledby="philosophy-heading">
+    <!-- Handmade story — editorial split -->
+    <section class="section section-alt" aria-labelledby="story-heading">
       <div class="container">
-        <div class="brand-statement fade-up">
-          <span class="eyebrow">The craft</span>
-          <h2 id="philosophy-heading">Made slowly, given warmly.</h2>
-          <p>
-            Every piece begins with yarn, a hook, and time. There is no mass production —
-            only careful stitches, thoughtful colours, and gifts meant to feel personal.
-            Whether it is a bouquet that never wilts or a keepsake for someone you love,
-            each order is treated as its own small project.
-          </p>
+        <div class="story-split">
+          <div class="story-visual fade-up" aria-hidden="true">
+            <div class="story-frame">
+              <img class="is-fallback"
+                src="assets/products/rose-bouquet.svg"
+                data-photo="assets/images/products/hero-feature.jpg"
+                width="480"
+                height="600"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="story-copy fade-up">
+            <span class="eyebrow">The craft</span>
+            <h2 id="story-heading">Made by hand, for you.</h2>
+            <p>
+              Every piece begins with yarn, a hook, and time. There is no factory line —
+              only careful stitches, colour choices that feel gift-ready, and work made
+              one order at a time in Pakistan.
+            </p>
+            <p>
+              Whether it is a bouquet that never wilts or a keepsake for someone you love,
+              each enquiry is treated as its own small project — agreed through Instagram,
+              then crocheted with care.
+            </p>
+            <a class="btn-link" href="about.html">Our story <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="categories-heading">
-      <div class="container">
-        <div class="section-header center fade-up">
-          <span class="eyebrow">Browse</span>
-          <h2 id="categories-heading">Product categories</h2>
-          <p>Explore by type — or ask for something entirely your own.</p>
-        </div>
-        <div class="category-grid fade-up">
-          <a class="category-tile" href="shop.html?filter=bouquets"><span>Bouquets</span><small>Lasting florals</small></a>
-          <a class="category-tile" href="shop.html?filter=flowers"><span>Flowers</span><small>Mini arrangements</small></a>
-          <a class="category-tile" href="shop.html?filter=accessories"><span>Accessories</span><small>Wearable pieces</small></a>
-          <a class="category-tile" href="shop.html?filter=amigurumi"><span>Amigurumi</span><small>Soft characters</small></a>
-          <a class="category-tile" href="shop.html?filter=home"><span>Home</span><small>Everyday crochet</small></a>
-          <a class="category-tile" href="custom.html"><span>Custom</span><small>Made for you</small></a>
-        </div>
-      </div>
-    </section>
-
+    <!-- Custom teaser with choose-list -->
     <section class="section section-soft" aria-labelledby="custom-teaser-heading">
       <div class="container">
         <div class="teaser-split">
@@ -190,16 +287,24 @@
               width="160"
               height="160"
               alt=""
+              loading="lazy"
             />
           </div>
           <div class="teaser-copy fade-up">
             <span class="eyebrow">Bespoke</span>
-            <h2 id="custom-teaser-heading">Something made especially for you.</h2>
+            <h2 id="custom-teaser-heading">Create something uniquely yours</h2>
             <p>
-              Share your colours, occasion and idea — we will shape a piece that feels
-              like yours. Custom bouquets, amigurumi and more, agreed stitch by stitch
-              through Instagram.
+              Share a few details and we will shape a piece that feels personal —
+              then confirm everything on Instagram before work begins.
             </p>
+            <ul class="choose-list" aria-label="What you can choose">
+              <li>Flower style</li>
+              <li>Colours</li>
+              <li>Size</li>
+              <li>Quantity</li>
+              <li>Gift wrapping</li>
+              <li>Occasion</li>
+            </ul>
             <a class="btn btn-dark" href="custom.html">Start a custom order</a>
           </div>
         </div>
@@ -210,68 +315,98 @@
       <div class="container">
         <div class="section-header center fade-up">
           <span class="eyebrow">How it works</span>
-          <h2 id="how-heading">Ordering is simple</h2>
-          <p>Orders and enquiries happen on Instagram — quick, friendly and personal.</p>
+          <h2 id="how-heading">From browse to doorstep</h2>
+          <p>No cart, no checkout — just a clear path from idea to handmade delivery across Pakistan.</p>
         </div>
-        <div class="steps fade-up">
+        <div class="steps steps-4 fade-up">
           <article class="step">
             <span class="step-num" aria-hidden="true">01</span>
-            <h3>Browse &amp; choose</h3>
-            <p>Explore the shop or bring a custom idea. Note the colours and size you have in mind.</p>
+            <h3>Choose</h3>
+            <p>Browse the shop or bring a custom idea. Note colours, size and occasion.</p>
           </article>
           <article class="step">
             <span class="step-num" aria-hidden="true">02</span>
-            <h3>Send a message</h3>
-            <p>Message @crochetbyarfa on Instagram. Use our form to draft a clear enquiry first.</p>
+            <h3>Share requirements</h3>
+            <p>Message @crochetbyarfa on Instagram — or draft a clear enquiry with our form first.</p>
           </article>
           <article class="step">
             <span class="step-num" aria-hidden="true">03</span>
-            <h3>Make &amp; ship</h3>
-            <p>Once details are agreed, your piece is handmade with care and shipped across Pakistan.</p>
+            <h3>Handcraft</h3>
+            <p>Once details and timing are agreed, your piece is crocheted by hand with care.</p>
+          </article>
+          <article class="step">
+            <span class="step-num" aria-hidden="true">04</span>
+            <h3>Receive</h3>
+            <p>Packed carefully and shipped across Pakistan. Timing confirmed in your DM.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" aria-labelledby="ig-heading">
+    <!-- Trust — structure only, no fake quotes -->
+    <section class="section section-alt" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="trust-band fade-up">
+          <div class="trust-copy">
+            <span class="eyebrow">Real conversations</span>
+            <h2 id="trust-heading">See the work. Ask anything.</h2>
+            <p>
+              Orders happen through Instagram so you can ask about colours, timing and
+              gift ideas directly. Follow along for finished pieces and behind-the-scenes making —
+              and share your own photos when your order arrives.
+            </p>
+            <!-- Owner: paste real customer quotes here when available -->
+            <div class="trust-placeholders" data-owner-fill="reviews" hidden aria-hidden="true">
+              <p class="owner-note">[Owner: add real Instagram reviews or DMs here]</p>
+            </div>
+          </div>
+          <div class="trust-actions">
+            <a class="btn btn-primary" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer">Follow @crochetbyarfa</a>
+            <a class="btn btn-secondary" href="contact.html">Ask about a piece</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ig-heading">
       <div class="container">
         <div class="section-header-row fade-up">
           <div class="section-header">
-            <span class="eyebrow">Follow along</span>
-            <h2 id="ig-heading">@crochetbyarfa</h2>
-            <p>New colours, finished pieces and behind-the-scenes making — on Instagram.</p>
+            <span class="eyebrow">On the feed</span>
+            <h2 id="ig-heading">See what’s being made</h2>
+            <p>New colours, finished pieces and quiet making moments — on Instagram @crochetbyarfa.</p>
           </div>
           <a class="btn btn-secondary" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a>
         </div>
-        <div class="ig-gallery fade-up" aria-label="Instagram gallery placeholders">
+        <div class="ig-gallery fade-up" aria-label="Instagram gallery — photos coming soon">
           <a class="ig-slot" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer" aria-label="View Instagram">
             <img class="is-fallback" src="assets/products/rose-bouquet.svg"
-              data-photo="assets/images/instagram/ig-01.jpg" alt="" />
+              data-photo="assets/images/instagram/ig-01.jpg" alt="" loading="lazy" />
             <span>Soon</span>
           </a>
           <a class="ig-slot" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer" aria-label="View Instagram">
             <img class="is-fallback" src="assets/products/scrunchie.svg"
-              data-photo="assets/images/instagram/ig-02.jpg" alt="" />
+              data-photo="assets/images/instagram/ig-02.jpg" alt="" loading="lazy" />
             <span>Soon</span>
           </a>
           <a class="ig-slot" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer" aria-label="View Instagram">
             <img class="is-fallback" src="assets/products/amigurumi.svg"
-              data-photo="assets/images/instagram/ig-03.jpg" alt="" />
+              data-photo="assets/images/instagram/ig-03.jpg" alt="" loading="lazy" />
             <span>Soon</span>
           </a>
           <a class="ig-slot" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer" aria-label="View Instagram">
             <img class="is-fallback" src="assets/products/mini-floral.svg"
-              data-photo="assets/images/instagram/ig-04.jpg" alt="" />
+              data-photo="assets/images/instagram/ig-04.jpg" alt="" loading="lazy" />
             <span>Soon</span>
           </a>
           <a class="ig-slot" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer" aria-label="View Instagram">
             <img class="is-fallback" src="assets/products/hair-clips.svg"
-              data-photo="assets/images/instagram/ig-05.jpg" alt="" />
+              data-photo="assets/images/instagram/ig-05.jpg" alt="" loading="lazy" />
             <span>Soon</span>
           </a>
           <a class="ig-slot" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer" aria-label="View Instagram">
             <img class="is-fallback" src="assets/products/coasters.svg"
-              data-photo="assets/images/instagram/ig-06.jpg" alt="" />
+              data-photo="assets/images/instagram/ig-06.jpg" alt="" loading="lazy" />
             <span>Soon</span>
           </a>
         </div>
@@ -281,11 +416,11 @@
     <section class="section">
       <div class="container">
         <div class="cta-band fade-up">
-          <h2>Ready to order?</h2>
-          <p>Follow @crochetbyarfa, browse the shop, or send a custom enquiry. We would love to make something for you.</p>
+          <h2>Ready when you are</h2>
+          <p>Browse a piece you love, or send a custom brief. Orders and questions are handled on Instagram — warm, personal, and clear.</p>
           <div class="cta-actions">
-            <a class="btn btn-secondary" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer">Visit Instagram</a>
-            <a class="btn btn-ghost" href="contact.html">Send an enquiry</a>
+            <a class="btn btn-secondary" href="custom.html">Custom order</a>
+            <a class="btn btn-ghost" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer">Message on Instagram</a>
           </div>
         </div>
       </div>

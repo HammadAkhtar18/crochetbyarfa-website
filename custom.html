@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Request a custom crochet order from crochetbyarfa — brief, consult, make and ship across Pakistan." />
+  <meta name="description" content="Request a custom crochet order from crochetbyarfa — share your idea, colours and occasion. Confirmed on Instagram. Shipping across Pakistan." />
+  <meta property="og:title" content="Custom orders — crochetbyarfa" />
+  <meta property="og:description" content="Made especially for you. Share your brief — we shape a handmade piece, then confirm details on Instagram." />
+  <meta property="og:type" content="website" />
   <title>Custom orders — crochetbyarfa</title>
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -18,7 +21,8 @@
         <h1>Made especially for you.</h1>
         <p>
           Have a colour palette, favourite flower, or character in mind? Share your brief —
-          we will shape a handmade piece that feels personal, then confirm details on Instagram.
+          we will shape a handmade piece that feels personal, then confirm details on Instagram
+          before any work begins.
         </p>
       </div>
     </header>
@@ -28,7 +32,7 @@
         <div class="section-header fade-up">
           <span class="eyebrow">The process</span>
           <h2 id="process-heading">From idea to doorstep</h2>
-          <p>A calm path from your brief to a finished piece.</p>
+          <p>A calm path from your brief to a finished piece — enquiry-based, not a checkout.</p>
         </div>
         <div class="steps steps-4 fade-up">
           <article class="step">
@@ -39,7 +43,7 @@
           <article class="step">
             <span class="step-num" aria-hidden="true">02</span>
             <h3>Consult &amp; quote</h3>
-            <p>We reply on Instagram with timing, yarn options and a clear price before anything begins.</p>
+            <p>We reply on Instagram with yarn options, timing and a clear price before anything begins.</p>
           </article>
           <article class="step">
             <span class="step-num" aria-hidden="true">03</span>
@@ -55,7 +59,50 @@
       </div>
     </section>
 
-    <section class="section section-alt" aria-labelledby="form-heading">
+    <section class="section section-alt" aria-labelledby="share-heading">
+      <div class="container">
+        <div class="custom-info-grid fade-up">
+          <div>
+            <div class="section-header">
+              <span class="eyebrow">What to share</span>
+              <h2 id="share-heading">Helpful details for a clear quote</h2>
+              <p>You do not need everything at once — but the more you can share, the smoother the conversation.</p>
+            </div>
+            <ul class="share-list">
+              <li><strong>Idea</strong> — bouquet, amigurumi, accessory, or something else</li>
+              <li><strong>Colours</strong> — soft palette, bold, or match a photo</li>
+              <li><strong>Size</strong> — roughly how big, or for whom</li>
+              <li><strong>Quantity</strong> — one piece or a small set</li>
+              <li><strong>Occasion</strong> — birthday, thank-you, wedding, everyday</li>
+              <li><strong>Deadline</strong> — when you need it by, if known</li>
+              <li><strong>Reference</strong> — a photo or sketch if you have one</li>
+            </ul>
+          </div>
+          <aside class="guidance-card">
+            <h3>Timing &amp; pricing</h3>
+            <p>
+              Custom pieces are quoted individually. Starting prices in the shop are a guide —
+              your final price depends on size, yarn and detail.
+            </p>
+            <p>
+              Turnaround is confirmed on Instagram once we understand your brief and current queue.
+              <!-- Owner: add typical lead times when established, e.g. "Often X–Y days for simple pieces" -->
+            </p>
+            <p class="guidance-soft" data-owner-fill="lead-time">
+              Timing confirmed on Instagram after we see your requirements.
+            </p>
+            <p class="guidance-soft" data-owner-fill="shipping-payment">
+              Shipping across Pakistan and payment steps are shared in your DM —
+              <span class="owner-inline"><!-- Owner: courier / payment notes --></span>
+              ask for your city when you enquire.
+            </p>
+            <a class="btn btn-primary btn-sm" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer">Message @crochetbyarfa</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="form-heading">
       <div class="container">
         <div class="section-header center fade-up">
           <span class="eyebrow">Consultation</span>
@@ -111,7 +158,7 @@
               </div>
               <div class="form-group">
                 <label for="c-message">Your message</label>
-                <textarea id="c-message" name="message" required placeholder="Occasion, deadline, inspiration, or anything else we should know…"></textarea>
+                <textarea id="c-message" name="message" required placeholder="Occasion, deadline, quantity, wrapping, inspiration photo description…"></textarea>
                 <span class="error" role="alert">Please fill in this field.</span>
               </div>
               <input type="hidden" name="whatsapp" value="" />
@@ -131,6 +178,19 @@
               <button type="button" class="btn btn-secondary" data-ig>Message @crochetbyarfa on Instagram</button>
               <button type="button" class="btn btn-ghost" data-again>Write another enquiry</button>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="cta-band fade-up">
+          <h2>Prefer to message directly?</h2>
+          <p>Follow @crochetbyarfa and send your idea anytime — we are happiest chatting colours and gifts there.</p>
+          <div class="cta-actions">
+            <a class="btn btn-secondary" href="https://www.instagram.com/crochetbyarfa/" target="_blank" rel="noopener noreferrer">Open Instagram</a>
+            <a class="btn btn-ghost" href="shop.html">Browse the shop</a>
           </div>
         </div>
       </div>
