@@ -40,9 +40,9 @@ Shared header and footer are injected by `js/nav.js`. Forms validate client-side
 
 ## Product photography
 
-Place real photos in `assets/images/products/` using the filenames listed in that folder’s README (e.g. `rose-bouquet.jpg`). Pages load SVG placeholders first and auto-prefer a JPG when you drop it via `data-photo`.
+Real photos from Instagram @crochetbyarfa live in `assets/images/products/` (see that folder’s README for filenames). Pages load SVG placeholders first and auto-prefer a JPG via `data-photo`.
 
-Instagram gallery slots use `assets/images/instagram/` — do not scrape Instagram.
+Instagram gallery thumbs are in `assets/images/instagram/`. Only public CDN / publicly available media was used — no private content.
 
 ## Tech
 
@@ -53,6 +53,6 @@ Instagram gallery slots use `assets/images/instagram/` — do not scrape Instagr
 
 ## Notes
 
-- Prices shown are **starting** prices in PKR; finals depend on size and colours via DM.
+- Hair accessories show **From Rs. 350** as seen on Instagram; other pieces say price via DM until confirmed.
 - There is no public email address on the site — enquiries go through Instagram.
 - en-GB spelling throughout.
